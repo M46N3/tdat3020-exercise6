@@ -7,7 +7,7 @@ pipeline {
                 sh 'docker build -t fuzzer .'
             }
         }
-        stage('Deploy') {
+        stage('Fuzzing') {
             steps{
                 echo 'Fuzzing'
                 sh 'docker container run fuzzer'
